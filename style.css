@@ -1,0 +1,54 @@
+body {
+    background-color: gainsboro;
+    font-family: 'Roboto';
+}
+
+header {
+    padding: 2rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    padding: 0 2rem;
+}
+
+article {
+    padding: 1rem;
+    background-color: #fff;
+    display: grid;
+    grid-template-areas: "title title release . . rate"
+                         "descr descr descr descr . ."
+                         "director producer . . . .";
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    border-radius: 5px;
+}
+
+h3 {
+    grid-area: title;
+}
+
+.release_date {
+    grid-area: release;
+}
+
+.rt_rate {
+    grid-area: rate;
+}
+
+.description {
+    grid-area: descr;
+}
+
+.director {
+    grid-area: director;
+}
+
+.producer {
+    grid-area: producer;
+}
+
+p, h3 {
+    margin: 0.5rem;
+}
