@@ -1,6 +1,7 @@
 const main = document.querySelector('main');
 let movies = [];
 
+// Fetch the movies from the link
 async function fetchMovies() {
 	const response = await fetch('https://ghibliapi.herokuapp.com/films', {
 		headers: {
@@ -11,13 +12,15 @@ async function fetchMovies() {
     return data;
 }
 
+// After fetching display the movies list 
 async function fetchAndDisplay() {
     movies = await fetchMovies();
     displayMovies(movies);
 }
 
+//Function which generate the html to display the list
 function displayMovies(myMovies) {
-    const html = myMovies.sort((a, b) => b.rt_score - a.rt_score)
+    const html = myMovies.sort((a, b) => b.rt_score - a.rt_score) // Sort by the score rate
                          .map(movie => {
                             return `
                             <article>
