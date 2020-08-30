@@ -28,8 +28,8 @@ function displayMovies(myMovies) {
                             <p class="release_date">Release in: ${movie.release_date}</p>
                             <p class="rt_rate">rt_score: ${movie.rt_score}</p>
                             <p class="description">${movie.description}</p>
-                            <p class="director">${movie.director}</p>
-                            <p class="producer">${movie.producer}</p>
+                            <p class="director">Director: ${movie.director}</p>
+                            <p class="producer">Producer: ${movie.producer}</p>
                         </article>
                             `
                         }).join('');
